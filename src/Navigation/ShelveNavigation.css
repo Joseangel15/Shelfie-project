@@ -1,0 +1,18 @@
+
+
+
+.shelfLetter {
+    
+    width: 100%;
+    background-color: rgb(211, 71, 53);
+    display: flex;
+}
+
+.titleShelf{
+
+    margin-Left: 25px;
+    font-Size: 20px;
+    color: white;
+    text-decoration-line: none;
+
+}

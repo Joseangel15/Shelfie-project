@@ -1,0 +1,45 @@
+
+
+.productImage {
+    background-image: url(product-image-placeholder.jpg);
+    background-size: 200px, 200px;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+
+
+
+.Edit{
+    margin: 20px;
+    width: 200px;
+    height: 75px;
+    border: none;
+    border-radius: 10px;
+    font-size: 28px;
+
+}
+
+.Save{
+    margin: 20px;
+    width: 200px;
+    height: 75px;
+    border: none;
+    border-radius: 30px;
+    font-size: 28px;
+    background-color: rgb(64, 249, 155);
+}
+
+.deleteBtn {
+    width: 200px;
+    margin: 20px;
+    height: 75px;
+    border: none;
+    border-radius: 10px;
+    font-size: 28px;
+}
+

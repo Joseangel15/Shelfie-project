@@ -1,0 +1,16 @@
+
+
+.shelfLetterNew {
+    width: 200px;
+    background-color: rgb(211, 71, 53);
+    display: flex;
+}
+
+.shelfLetterNew2 {
+    width: 100%;
+    background-color: rgb(237, 107, 90);
+    display: flex;
+    color: #ffffff;
+    text-decoration-line: none;
+
+}
