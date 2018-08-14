@@ -10,7 +10,7 @@ module.exports = {
         const db = req.app.get('db')
 
 
-         db.find_all([id]).then(dbResult => {
+        db.find_all([id]).then(dbResult => {
             res.status(200).send(dbResult)
         })
     },

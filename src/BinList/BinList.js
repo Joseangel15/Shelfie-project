@@ -16,7 +16,7 @@ class BinList extends Component {
     
     
     componentDidMount = () => {
-        console.log(this.props.match.params.id)
+        
         var urlParam = this.props.match.params.id
         var shelve1
         
@@ -31,7 +31,6 @@ class BinList extends Component {
         } else {
             return
         }
-        console.log(shelve1)
 
         axios.get(`/api/Shelve/Bins/${shelve1}`).then(res => {
             this.setState({
@@ -42,7 +41,6 @@ class BinList extends Component {
                 
             })
         })
-        console.log(this.state.bins)
     }
 
 
@@ -51,19 +49,41 @@ class BinList extends Component {
         const newBin = this.state.bins.map(el => {
             
                         
-            console.log(el.product_name)
             if(`${el.product_name}` === 'null'){
 
                 return (
-                
-                    <Link to={`/AddItem/${el.shelve}${el.bin}`}><button className='addBtn'>+ Add Inventory</button></Link>
+                    
+                <div>
+
+                    <Link to={`/AddItem/${el.shelve}${el.bin}`}>
+                    
+                    <button 
+                        className='addBtn'>
+                        
+                        + Add Inventory
+                        
+                        </button></Link>
+
+                </div>
+                    
                 )
                             
             } else {
                 return (
 
-                    <Link to={`/ProductView/${el.shelve}${el.bin}`}><button className='binBtn'>Bin {el.bin}</button></Link>
+                <div>
+
+                    <Link to={`/ProductView/${el.shelve}${el.bin}`}>
                     
+                    <button 
+                        className='binBtn'>
+                        
+                        Bin {el.bin}
+                        
+                        </button>
+                        </Link>
+
+                </div>
                         
                 )}
 
@@ -77,7 +97,9 @@ class BinList extends Component {
                 <ShelveNavigation  shelve={this.state.shelve}/>
 
                 <div className='allBins'>
+
                     {newBin}
+                    
                 </div>
 
 

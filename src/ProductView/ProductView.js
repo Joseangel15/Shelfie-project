@@ -34,16 +34,9 @@ class ProductView extends Component {
             shelve: shelve2,
             bin: bin2
         })
-
-            let body = {
-
-                shelve: shelve2,
-                bin: bin2
-
-            } 
         
 
-        axios.get(`/api/Shelve/bin/${shelve2}${bin2}`, body ).then(res => {
+        axios.get(`/api/Shelve/bin/${shelve2}${bin2}` ).then(res => {
 
             this.setState({
 
@@ -81,6 +74,7 @@ class ProductView extends Component {
     editProduct = () => {
 
         const { product_name, product_price, shelve, bin } = this.state;
+
         let {id} = this.props.match.params;
 
 
@@ -116,7 +110,7 @@ class ProductView extends Component {
     }
 
     handleDelete = () => {
-        console.log(this.state.shelve)
+
         axios.put(`/api/Shelve/DeleteBin/${this.state.shelve}${this.state.bin}`).then(res => {
             this.setState({
                 shelves: res.data
@@ -180,7 +174,9 @@ class ProductView extends Component {
 
                     </button>
                     
-                    <Link to={`/BinList/Shelve${this.state.shelve}`}><button
+                    <Link to={`/BinList/Shelve${this.state.shelve}`}>
+                    
+                    <button
                         onClick={() => this.handleDelete()}
                         className='deleteBtn'
                         >

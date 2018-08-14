@@ -116,13 +116,18 @@ class AddItem extends Component {
                 </div>
 
                 <div>
-                    <Link to={`/BinList/Shelve${this.state.shelve}`}><button 
+                    
+                    <Link to={`/BinList/Shelve${this.state.shelve}`}>
+                    
+                    <button 
                         className='inventoryBtn'
                         onClick={this.handleAddInventory}>
                         
                         + Add Inventory
                     
-                    </button></Link>
+                    </button>
+                    </Link>
+
                 </div>
 
             </div>

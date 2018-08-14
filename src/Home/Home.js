@@ -4,23 +4,7 @@ import {Link} from 'react-router-dom';
 import './Home.css';
 
 class Home extends Component {
-    constructor(){
-        super()
-
-        this.state = {
-
-            shelves: []
-        }
-    }
-
-    // componentDidMount = () => {
-    //     axios.get(`/api/Shelves/${shelve}`).then(res => {
-    //         this.setState({
-    //             shelves: res.data
-    //         })
-    //     })
-    // }
-
+    
 
     render() {
 
